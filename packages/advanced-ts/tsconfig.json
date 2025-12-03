@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "stripInternal": true,
+    "declaration": true
+  },
+  "include": ["src", "tests", "benchmark", "*.config.ts", "*.setup.ts"],
+  "exclude": ["coverage"]
+}

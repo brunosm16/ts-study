@@ -1,0 +1,63 @@
+{
+  "name": "advanced-ts",
+  "version": "0.0.1",
+  "description": "advanced typescript techniques and concepts",
+  "author": {
+    "name": "Bruno Moraes",
+    "email": "brunoskr23@gmail.com"
+  },
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "*.md"
+  ],
+  "engines": {
+    "node": ">=20.17.0 <21.0.0 || >=22.0.0 <23.0.0 || >=24.0.0"
+  },
+  "keywords": [
+    "advanced typescript",
+    "typescript"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "pnpm run clean && pnpm run lint:fix && pnpm run format:fix",
+    "build": "pnpm run prebuild && tsup",
+    "publish": "pnpm run build && pnpm publish --access public",
+    "test": "vitest run --coverage",
+    "test:file": "vitest run",
+    "test:file:watch": "pnpm test:file --watch",
+    "lint": "eslint",
+    "lint:fix": "pnpm run lint --fix",
+    "format": "prettier --check ./",
+    "format:fix": "prettier --write ./"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "peerDependencies": {
+    "eslint": "catalog:peer",
+    "rimraf": "catalog:peer",
+    "tsup": "catalog:peer",
+    "typescript": "catalog:peer",
+    "typescript-eslint": "catalog:peer"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.0.0",
+    "@types/lodash.clonedeep": "^4.5.9"
+  }
+}
