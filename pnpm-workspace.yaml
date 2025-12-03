@@ -1,0 +1,16 @@
+packages:
+  - packages/*
+
+engineStrict: true
+publicHoistPattern:
+  - '@eslint/*'
+  - '@vitest/*'
+  - 'globals'
+
+catalogs:
+  peer:
+    'eslint': '^9.28.0'
+    'typescript': '^5.8.3'
+    'typescript-eslint': '^8.34.0'
+    'rimraf': '^6.0.1'
+    'tsup': '^8.5.0'
