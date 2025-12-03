@@ -46,15 +46,13 @@
     "format": "prettier --check ./",
     "format:fix": "prettier --write ./"
   },
-  "dependencies": {
-    "nodemon": "^3.1.11"
-  },
   "peerDependencies": {
     "eslint": "catalog:peer",
     "rimraf": "catalog:peer",
     "tsup": "catalog:peer",
     "typescript": "catalog:peer",
-    "typescript-eslint": "catalog:peer"
+    "typescript-eslint": "catalog:peer",
+    "nodemon": "catalog:peer"
   },
   "devDependencies": {
     "@faker-js/faker": "^10.0.0",
