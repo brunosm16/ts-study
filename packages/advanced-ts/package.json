@@ -41,6 +41,8 @@
     "test": "vitest run --coverage",
     "test:file": "vitest run",
     "test:file:watch": "pnpm test:file --watch",
+    "dev": "nodemon --exec \"npx tsx\" src/constructor-function.ts",
+    "debug": "nodemon --inspect --exec \"npx tsx\" src/index.ts",
     "lint": "eslint",
     "lint:fix": "pnpm run lint --fix",
     "format": "prettier --check ./",
